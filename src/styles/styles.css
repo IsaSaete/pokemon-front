@@ -5,7 +5,11 @@
 }
 
 body {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 20px;
+  background-color: #e2b41c;
+  font-family: "Slackey", system-ui;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
 }
