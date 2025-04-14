@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "@fontsource-variable/orbitron/index.css";
+import "@fontsource/slackey/index.css";
 import App from "./components/App/App";
 import "./styles/styles.css";
 

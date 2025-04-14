@@ -13,7 +13,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@fontsource-variable/orbitron": "^5.2.5",
+    "@fontsource/slackey": "^5.2.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
