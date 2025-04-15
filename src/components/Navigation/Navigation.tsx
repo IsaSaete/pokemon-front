@@ -6,7 +6,7 @@ const Navigation: React.FC = () => {
     <nav>
       <ul>
         <li>
-          <NavLink className="navigation-list__link" to="/pokemon">
+          <NavLink className="navigation-list__link" to="/pokemons">
             Pokémons
           </NavLink>
         </li>
