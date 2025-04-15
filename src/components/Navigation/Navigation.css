@@ -1,0 +1,22 @@
+.navigation-list__link {
+  font-size: 1rem;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 6px #000;
+  border: 2px solid var(--secondary-color);
+
+  @media (width > 500px) {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    box-shadow: 3px 3px 6px #fff;
+  }
+}
+
+.navigation-list__link.active {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
