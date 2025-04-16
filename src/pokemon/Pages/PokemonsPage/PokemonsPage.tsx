@@ -16,7 +16,7 @@ const PokemonsPage: React.FC = () => {
           Pokedex - {pokedexCount} Pokémon{pokedexCount !== 1 ? "s" : ""}
         </h3>
       </div>
-      <PokemonList pokemons={pokemons} />
+      <PokemonList />
     </div>
   );
 };
