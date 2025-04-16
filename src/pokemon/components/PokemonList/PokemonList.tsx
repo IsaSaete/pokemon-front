@@ -1,11 +1,9 @@
-import { Pokemon } from "../../types";
+import usePokemons from "../../hooks/usePokemons";
 import "./PokemonsList.css";
 
-interface PokemonListProps {
-  pokemons: Pokemon[];
-}
+const PokemonList: React.FC = () => {
+  const { pokemons } = usePokemons();
 
-const PokemonList: React.FC<PokemonListProps> = ({ pokemons }) => {
   return (
     <ul className="pokemons-list">
       {pokemons.map((pokemon) => (
