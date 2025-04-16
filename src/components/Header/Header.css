@@ -1,9 +1,9 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 0px 15px 15px 15px;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
 }
 
 .app-title {

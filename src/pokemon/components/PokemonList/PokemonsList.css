@@ -1,0 +1,10 @@
+.pokemons-list {
+  display: grid;
+  padding: 20px;
+  row-gap: 10px;
+  column-gap: 15px;
+
+  @media (width > 500px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
