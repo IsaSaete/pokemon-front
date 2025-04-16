@@ -1,8 +1,7 @@
-export interface Pokemon {
+export interface PokemonDto {
   id: string;
   name: string;
   pokedexPosition: number;
   imageUrl: string;
   isCaptured: boolean;
-  imageAlt: string;
 }
