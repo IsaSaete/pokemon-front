@@ -10,5 +10,12 @@ export default defineConfig({
     reporters: ["verbose"],
     environment: "jsdom",
     setupFiles: ["./src/setupTest.ts"],
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "json", "html"],
+      exclude: ["main.tsx", "**/types.ts", "vite-env.d.ts"],
+      include: ["**/*.tsx", "**/*.ts"],
+      reportsDirectory: "../coverage",
+    },
   },
 });
