@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router";
 import App from "../components/App/App";
-import PokemonsPage from "../pokemon/Pages/PokemonsPage";
+import PokemonsPage from "../pokemon/Pages/PokemonsPage/PokemonsPage";
 
 const AppRouter: React.FC = () => {
   return (

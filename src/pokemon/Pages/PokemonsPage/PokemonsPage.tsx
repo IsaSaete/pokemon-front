@@ -1,9 +1,10 @@
+import { Pokemon } from "../../types";
+import PokemonList from "../../components/PokemonList/PokemonList";
 import "./PokemonsPage.css";
-import { Pokemon } from "../types";
 
 const PokemonsPage: React.FC = () => {
   const pokemons: Pokemon[] = [];
-  const pokemonsCount = pokemons.length;
+  const pokedexCount = pokemons.length;
 
   return (
     <div className="main-content">
@@ -12,9 +13,10 @@ const PokemonsPage: React.FC = () => {
           Pokémon<span className="subtitle"> ¡Hazte con todos!</span>
         </h2>
         <h3 className="count">
-          Pokedex - {pokemonsCount} Pokémon{pokemonsCount !== 1 ? "s" : ""}
+          Pokedex - {pokedexCount} Pokémon{pokedexCount !== 1 ? "s" : ""}
         </h3>
       </div>
+      <PokemonList pokemons={pokemons} />
     </div>
   );
 };
