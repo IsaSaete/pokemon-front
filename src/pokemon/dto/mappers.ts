@@ -8,6 +8,7 @@ export const mapPokemonsDtotoPokemons = (
     ...pokemonDto,
     name,
     imageAlt: `Pokemon ${name}`,
+    types: [],
   }));
 
   return pokemons;

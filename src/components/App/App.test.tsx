@@ -19,14 +19,14 @@ describe("Given the App component", () => {
       expect(appTitle).toBeVisible();
     });
 
-    test("Then it should show a 'Pokémon' link", () => {
+    test("Then it should show a 'Pokémons' link", () => {
       render(
         <MemoryRouter>
           <App />
         </MemoryRouter>,
       );
 
-      const pokemonLink = screen.getByRole("link", { name: /pokémon/i });
+      const pokemonLink = screen.getByRole("link", { name: /pokémons/i });
 
       expect(pokemonLink).toBeVisible();
     });

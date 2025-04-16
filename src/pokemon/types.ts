@@ -5,4 +5,5 @@ export interface Pokemon {
   imageUrl: string;
   isCaptured: boolean;
   imageAlt: string;
+  types: string[];
 }
