@@ -1,6 +1,5 @@
 .main-content {
-  padding-top: 30px;
-  gap: 15px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -17,7 +16,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 50px;
   }
 }
 
@@ -25,11 +23,13 @@
   text-align: center;
   font-size: 2rem;
   letter-spacing: 2px;
-  color: #e90a0a;
-  text-shadow: 1px 1px 2px black;
+  color: var(--secondary-color);
 
   @media (width > 500px) {
     font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 1px 1px #fff;
   }
 }
 
@@ -39,8 +39,7 @@
 
 .count {
   border: 3px solid var(--secondary-color);
-  color: #e90a0a;
-  text-shadow: 1px 1px 1px black;
+  color: var(--secondary-color);
   letter-spacing: 1px;
   border-radius: 15px;
   padding: 5px 10px;
