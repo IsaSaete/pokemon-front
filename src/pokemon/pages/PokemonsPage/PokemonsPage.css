@@ -1,18 +1,16 @@
 .main-content {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .title-containt {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 0 20px;
+  padding: 20px;
+  gap: 30px;
 
   @media (width > 500px) {
-    max-width: 1600px;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -21,26 +19,32 @@
 
 .title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
   letter-spacing: 2px;
   color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
 
   @media (width > 500px) {
     font-size: 3rem;
-    display: flex;
-    flex-direction: column;
     text-shadow: 1px 1px #fff;
   }
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+
+  @media (width > 500px) {
+    font-size: 1.2rem;
+  }
 }
 
 .count {
-  border: 3px solid var(--secondary-color);
-  color: var(--secondary-color);
+  border: 3px solid #1e3634;
+  color: #1e3634;
   letter-spacing: 1px;
   border-radius: 15px;
   padding: 5px 10px;
+  text-align: center;
+  font-size: 1rem;
 }
