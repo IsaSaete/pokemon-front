@@ -1,0 +1,47 @@
+.pokemon {
+  background-color: #3be37361;
+  padding: 25px;
+  border-radius: 30px;
+  box-shadow: 5px 4px 10px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    background-color: #3be373ab;
+    box-shadow: 010px 10px 25px #000;
+  }
+}
+
+.pokemon__name {
+  font-size: 2rem;
+  color: #1e3634;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+}
+
+.pokemon__image {
+  width: 100%;
+  height: auto;
+  clip-path: circle(50% at 50% 50%);
+  background-color: #0000ff41;
+}
+
+.pokemon__type {
+  text-transform: capitalize;
+  color: #1e3634;
+  font-size: 1rem;
+  padding: 5px 0px;
+}
+
+.pokemon__types {
+  border-radius: 5px;
+  background-color: #0000ff41;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
