@@ -1,7 +1,7 @@
 import { Pokemon } from "../types";
 import { PokemonClientStructure, PokemonTypes } from "./types";
 import { PokemonDto } from "../dto/types";
-import { mapPokemonsDtotoPokemons } from "../dto/mappers";
+import { mapPokemonsDtoToPokemons } from "../dto/mappers";
 
 class PokemonClient implements PokemonClientStructure {
   private apiUrl = import.meta.env.VITE_API_URL;
@@ -13,12 +13,14 @@ class PokemonClient implements PokemonClientStructure {
       pokemons: PokemonDto[];
     };
 
-    const pokemonsWithoutTypes = mapPokemonsDtotoPokemons(pokemons);
+    const pokemonsWithoutTypes = mapPokemonsDtoToPokemons(pokemons);
 
     const apiPokemons = await Promise.all(
       pokemonsWithoutTypes.map(async (pokemon) => {
+        const pokemonNameLowerCase = pokemon.name.toLocaleLowerCase();
+
         const pokeApiResponse = await fetch(
-          `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`,
+          `https://pokeapi.co/api/v2/pokemon/${pokemonNameLowerCase}`,
         );
 
         const pokeApiData = (await pokeApiResponse.json()) as PokemonTypes;
@@ -34,4 +36,5 @@ class PokemonClient implements PokemonClientStructure {
     return apiPokemons;
   };
 }
+
 export default PokemonClient;

@@ -4,12 +4,15 @@ import "./Navigation.css";
 const Navigation: React.FC = () => {
   return (
     <nav>
-      <ul>
+      <ul className="navigation-list">
         <li>
           <NavLink className="navigation-list__link" to="/pokemons">
             Pokémons
           </NavLink>
         </li>
+        <NavLink className="navigation-list__link" to="/add-pokemon">
+          Añadir Pokemon
+        </NavLink>
       </ul>
     </nav>
   );

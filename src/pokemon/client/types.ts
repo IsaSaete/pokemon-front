@@ -5,16 +5,9 @@ export interface PokemonClientStructure {
 }
 
 export interface PokemonTypes {
-  types: [
-    {
-      type: {
-        name: string;
-      };
-    },
-    {
-      type: {
-        name: string;
-      };
-    },
-  ];
+  types: {
+    type: {
+      name: string;
+    };
+  }[];
 }
