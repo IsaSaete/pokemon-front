@@ -1,7 +1,16 @@
 .main-content {
   padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .title-page {
   text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+
+  @media (width > 500px) {
+    font-size: 2rem;
+  }
 }

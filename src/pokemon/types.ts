@@ -7,3 +7,5 @@ export interface Pokemon {
   imageAlt: string;
   types: string[];
 }
+
+export type PokemonFormData = Omit<Pokemon, "id" | "types" | "isCaptured">;
