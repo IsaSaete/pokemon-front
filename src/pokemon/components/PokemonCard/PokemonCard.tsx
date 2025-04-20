@@ -6,10 +6,11 @@ interface PokemonCardProps {
 }
 
 const PokemonCard: React.FC<PokemonCardProps> = ({
-  pokemon: { imageUrl, imageAlt, name, types },
+  pokemon: { imageUrl, imageAlt, name, types, pokedexPosition },
 }) => {
   return (
     <article className="pokemon">
+      <span className="pokemon__pokedex-position">#{pokedexPosition}</span>
       <img
         className="pokemon__image"
         src={imageUrl}

@@ -8,4 +8,7 @@ export interface Pokemon {
   types: string[];
 }
 
-export type PokemonFormData = Omit<Pokemon, "id" | "types" | "isCaptured">;
+export type PokemonFormData = Omit<
+  Pokemon,
+  "id" | "types" | "isCaptured" | "imageAlt"
+>;

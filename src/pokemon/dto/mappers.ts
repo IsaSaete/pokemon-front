@@ -13,3 +13,16 @@ export const mapPokemonsDtoToPokemons = (
 
   return pokemons;
 };
+
+export const mapPokemonDtoToPokemon = (
+  pokemonDto: PokemonDto,
+  types: string[],
+): Pokemon => {
+  const pokemon: Pokemon = {
+    ...pokemonDto,
+    types,
+    imageAlt: `Pokemon ${pokemonDto.name}`,
+  };
+
+  return pokemon;
+};
