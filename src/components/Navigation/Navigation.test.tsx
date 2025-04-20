@@ -13,7 +13,12 @@ describe("Given the Navigation component", () => {
 
       const pokemonLink = screen.getByRole("link", { name: /pokémon/i });
 
+      const addPokemonLink = screen.getByRole("link", {
+        name: /añadir Pokemon/i,
+      });
+
       expect(pokemonLink).toBeVisible();
+      expect(addPokemonLink).toBeVisible();
     });
   });
 });
