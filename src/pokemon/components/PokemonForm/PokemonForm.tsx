@@ -27,14 +27,21 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
     }));
   };
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   const navigate = useNavigate();
 
   const onSubmitForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setErrorMessage("");
 
-    await action(pokemonData);
+    try {
+      await action(pokemonData);
 
-    navigate("/");
+      navigate("/");
+    } catch {
+      setErrorMessage("⚠️ ¡Lo siento, este Pokemon no existe! ⚠️");
+    }
   };
 
   const isFormValid =
@@ -44,6 +51,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
 
   return (
     <form className="form" onSubmit={onSubmitForm}>
+      {errorMessage && <p className="form__error">{errorMessage}</p>}
       <div className="form__group">
         <label htmlFor="name" className="form__label">
           Nombre
@@ -62,7 +70,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
           URL de la imagen
         </label>
         <input
-          type="text"
+          type="url"
           id="imageUrl"
           className="form__input"
           value={pokemonData.imageUrl}
@@ -77,7 +85,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ action }) => {
           type="number"
           id="pokedexPosition"
           className="form__input"
-          value={pokemonData.pokedexPosition}
+          value={pokemonData.pokedexPosition || ""}
           onChange={modifyPokemonData}
           min={1}
         />

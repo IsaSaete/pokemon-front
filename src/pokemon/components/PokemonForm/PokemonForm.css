@@ -66,3 +66,12 @@
     box-shadow: 3px 3px 5px #000;
   }
 }
+
+.form__error {
+  color: #ffffff;
+  background-color: #cb0303;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  margin: 0;
+}
